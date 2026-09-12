@@ -51,7 +51,7 @@ export function Markets({ onSignal }: { onSignal: (symbol: string) => void }) {
   useEffect(() => registerChartCapture(prepare), [prepare]);
   function applyRatio(value: number) { setRatio(value); setTarget(entry + Math.abs(entry - stop) * value * (side === 'Buy' ? 1 : -1)); }
   function changeSide(value: 'Buy' | 'Sell') { setSide(value); const distance = Math.abs(entry - stop); setStop(entry + distance * (value === 'Buy' ? -1 : 1)); setTarget(entry + distance * ratio * (value === 'Buy' ? 1 : -1)); }
-  return <><div className="page-heading"><div><div className="eyebrow">FIND YOUR NEXT OPPORTUNITY</div><h1>Market perspective<span className="coral">.</span></h1><p>Price action, context, and a considered plan.</p></div><span className="outline-badge">{feed?.source === 'bridge' ? 'Provider feed' : 'Demo OHLC'} · {error ? 'Cached / offline' : '15s refresh'}</span></div>
+  return <><div className="page-heading"><div><div className="eyebrow">FIND YOUR NEXT OPPORTUNITY</div><h1>Market perspective<span className="coral">.</span></h1><p>Price action, context, and a considered plan.</p></div><span className={`feed-status ${error ? 'is-offline' : ''}`}><i />{feed?.source === 'bridge' ? 'Provider feed' : 'Demo OHLC'}<b>{error ? 'Cached / offline' : 'Auto-refresh 15s'}</b></span></div>
     <NewsLock symbol={symbol} />
     <div className="workspace-grid"><div className="main-column">
       <div className="market-selector">{markets.map(m => <button key={m.symbol} className={symbol === m.symbol ? 'selected' : ''} onClick={() => setPreferences({ selectedSymbol: m.symbol })}>{m.icon}<span>{m.symbol}</span></button>)}</div>

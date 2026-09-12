@@ -29,8 +29,28 @@
   color: #fff;
   border-color: var(--dark);
 }
+.market-selector > button:hover:not(.selected) {
+  background: #f6f4ec;
+  border-color: #aaa698;
+}
 .trading-card {
   padding: 24px;
+  position: relative;
+  overflow: hidden;
+}
+.trading-card::before {
+  content: '';
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  right: -140px;
+  top: -190px;
+  border-radius: 50%;
+  background: #ff4d4d0d;
+  pointer-events: none;
+}
+.trading-card > * {
+  position: relative;
 }
 .asset-heading {
   display: flex;
@@ -81,6 +101,7 @@
 .zone-toggle.active {
   color: #ff9890;
   border-color: #ff4d4d55;
+  background: #ff4d4d12;
 }
 .candlestick-stage {
   margin: 18px 0 13px;
