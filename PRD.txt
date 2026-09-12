@@ -1,0 +1,101 @@
+================================================================================
+                        PRODUCT REQUIREMENT DOCUMENT (PRD)
+                             MONETA APP (V1.0)
+================================================================================
+Tanggal: 12 September 2026
+Status : Final Version for MVP
+Target : Responsive Progressive Web App (React PWA - Desktop & Mobile)
+
+--------------------------------------------------------------------------------
+1. EXECUTIVE SUMMARY & OBJECTIVE
+--------------------------------------------------------------------------------
+Moneta App adalah platform "all-in-one workspace" berbasis React PWA yang dirancang 
+khusus untuk trader pribadi dan pengelola komunitas trading (Forex, Crypto, Commodities).
+
+Tujuan Utama:
+Menggabungkan fungsi Charting (TradingView), Auto-Zone Analysis (SnR/SnD), 
+One-Click Telegram Signal Generator, Daily PnL Journaling Calendar, Macro Economic 
+Calendar, dan Broker Auto-Tracking dalam satu antarmuka yang cepat dan responsif.
+
+--------------------------------------------------------------------------------
+2. PROBLEM STATEMENT & VALUE PROPOSITION
+--------------------------------------------------------------------------------
+Problem:
+- Fragmentasi aplikasi (trader harus membuka TradingView, Excel, Forex Factory, 
+  dan MetaTrader secara bersamaan).
+- Lambatnya proses membagikan sinyal ke komunitas (perlu screenshot manual, 
+  salin angka Entry/SL/TP, dan ketik caption).
+- Malas mencatat jurnal trading harian karena proses input manual.
+
+Value Proposition:
+Satu platform PWA terpadu yang memetakan zona otomatis, mengirim sinyal ke 
+Telegram dalam 1 klik, serta mencatat jurnal PnL harian secara otomatis dari broker.
+
+--------------------------------------------------------------------------------
+3. USER PERSONA & USE CASES
+--------------------------------------------------------------------------------
+User Target: Community Leader / Active Retail Trader (Price Action, SnD, SMC).
+
+Primary Use Case:
+1. User membuka app di HP/Laptop, mengecek jam sesi (WIB) & kalender berita.
+2. User menganalisis chart yang otomatis mendeteksi zona Demand/Supply.
+3. User menekan tombol "Send Signal", memasukkan variabel Entry/SL/TP & Risk.
+4. Sistem auto-capture gambar chart dan mengirimkan pesan terformat ke Telegram.
+5. Setelah trade di broker selesai, hasilnya ter-sync otomatis ke Kalender PnL.
+
+--------------------------------------------------------------------------------
+4. FEATURE SPECIFICATIONS
+--------------------------------------------------------------------------------
+A. CHARTING & AUTO-ZONE ENGINE
+   - Integrasi TradingView Lightweight Charts (Candlestick & Volume).
+   - Algoritma Auto-Detection: Support & Resistance (SnR), Supply & Demand (SnD), 
+     serta Liquidity Pools/Sweeps.
+   - Filter Tingkat Risiko: Low Risk, Medium Risk, High Risk.
+   - Interactive Risk/Reward Ratio Tool (Custom 1:2, 1:3, dst).
+   - Toggle Show/Hide Zone untuk membersihkan tampilan chart.
+
+B. TELEGRAM SIGNAL GENERATOR
+   - Trigger: Floating Action Button (Mobile) / Top Bar Button (Desktop).
+   - Auto-capture canvas area chart yang aktif.
+   - Form Auto-fill: Pair, Direction (Buy/Sell), Entry, SL (Pips), TP1/2, Risk Level.
+   - Custom Template Caption Editor.
+   - Integration: Telegram Bot API (sendPhoto & sendMessage).
+
+C. TRADING JOURNAL (DAILY PnL CALENDAR)
+   - Visual Kalender Bulanan (Grid View):
+     * Hijau : Net Profit (Contoh: +$250.00 / +2.5%)
+     * Merah : Net Loss (Contoh: -$100.00 / -1.0%)
+     * Abu   : No Trade / Breakeven
+   - Monthly Metrics: Total Net PnL, Win Rate (%), Avg RR, Max Drawdown.
+   - Detail Modal: Rincian transaksi otomatis saat tanggal diklik.
+
+D. MACRO & MARKET SESSION DASHBOARD
+   - Economic Calendar: Tabel berita High Impact (NFP, CPI, PPI) + Countdown Timer.
+   - News Lock Warning: Peringatan visual di chart 30-60 menit sebelum rilis data.
+   - Market Session Clock: Jam realtime sesi Sydney, Tokyo, London, NY dalam WIB.
+
+E. BROKER AUTO-TRACKING
+   - Realtime Monitoring: Balance, Equity, Margin Level (%), dan Floating PnL.
+   - Risk Exposure Alert: Peringatan jika total margin/risk melebihi batas toleransi.
+
+--------------------------------------------------------------------------------
+5. TECHNICAL ARCHITECTURE & TECH STACK
+--------------------------------------------------------------------------------
+- Framework          : React.js (via Vite)
+- Styling & UI       : Tailwind CSS + Lucide React
+- State Management   : Zustand
+- PWA Engine         : vite-plugin-pwa + Workbox (Service Worker & Manifest)
+- Chart Engine       : TradingView Lightweight Charts
+- External API       : Telegram Bot API & Broker Bridge API (MT4/MT5/CEX)
+
+--------------------------------------------------------------------------------
+6. NON-FUNCTIONAL REQUIREMENTS (NFR)
+--------------------------------------------------------------------------------
+- Performance : First Contentful Paint (FCP) < 1.5 detik, Chart 60 FPS.
+- Responsiveness: Adaptif untuk Mobile (320px+) dan Desktop Ultra-wide.
+- PWA Compliance: Dapat di-install (Add to Home Screen) & bekerja offline-cached.
+- Security    : API Key Telegram & Token Broker tersimpan aman di local storage.
+
+================================================================================
+                                END OF DOCUMENT
+================================================================================

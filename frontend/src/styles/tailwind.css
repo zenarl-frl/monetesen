@@ -1,0 +1,10 @@
+@layer theme, base, components, utilities;
+@import 'tailwindcss/theme.css' layer(theme);
+@import 'tailwindcss/utilities.css' layer(utilities);
+@source '../';
+@theme {
+  --color-coral: #ff4d4d;
+  --color-canvas: #ebe9e1;
+  --color-charcoal: #191919;
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+}

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><title>Vortex Terminal</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "canvas-cream": "#EBE9E1", "surface-container": "#f0eee6", "on-background": "#1b1c17", "surface-container-low": "#f6f4eb", "primary-fixed-dim": "#ffb3ae", "background": "#fcf9f1", "outline-variant": "#e4beba", "tertiary-container": "#76756e", "inverse-on-surface": "#f3f1e9", "on-surface-variant": "#5b403e", "primary-container": "#db3237", "surface-bright": "#fcf9f1", "secondary": "#5f5e5e", "on-tertiary-fixed-variant": "#474742", "surface-container-lowest": "#ffffff", "error": "#ba1a1a", "secondary-fixed": "#e5e2e1", "surface-container-high": "#eae8e0", "on-surface": "#1b1c17", "primary-fixed": "#ffdad7", "surface-variant": "#e4e2db", "on-error": "#ffffff", "error-container": "#ffdad6", "secondary-container": "#e2dfde", "on-secondary": "#ffffff", "tertiary": "#5d5c56", "surface-dark": "#191919", "text-primary": "#0F0F0F", "tertiary-fixed-dim": "#c9c6bf", "surface-tint": "#ba1724", "text-secondary": "#7E7E7A", "inverse-primary": "#ffb3ae", "accent-coral": "#FF4D4D", "on-secondary-fixed-variant": "#474746", "on-secondary-fixed": "#1c1b1b", "on-primary-fixed-variant": "#930014", "secondary-fixed-dim": "#c8c6c5", "on-error-container": "#93000a", "text-light": "#FFFFFF", "surface-taupe": "#B5B3AC", "surface-dim": "#dcdad2", "inverse-surface": "#30312c", "surface": "#fcf9f1", "on-secondary-container": "#636262", "outline": "#8f6f6d", "on-tertiary-fixed": "#1c1c17", "primary": "#b71422", "surface-container-highest": "#e4e2db", "on-primary-fixed": "#410004", "on-tertiary-container": "#fdffdc", "tertiary-fixed": "#e5e2db", "on-tertiary": "#ffffff", "on-primary": "#ffffff", "on-primary-container": "#fffbff" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-xl": "1.75rem", "gutter-desktop": "1.5rem", "space-sm": "0.5rem", "margin-desktop": "2.5rem", "space-md": "1rem", "space-2xl": "2.5rem", "space-xs": "0.25rem", "space-lg": "1.25rem", "margin": "1.25rem", "gutter": "1rem" }, fontFamily: { "headline-md": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "body-md": ["Inter"], "body-lg": ["Inter"], "label-md": ["Inter"], "label-sm": ["Inter"], "body-sm": ["Inter"], "title-md": ["Plus Jakarta Sans"], "display-lg": ["Plus Jakarta Sans"] }, fontSize: { "headline-md": ["20px", { lineHeight: "26px", letterSpacing: "-0.01em", fontWeight: "600" }], "headline-lg": ["32px", { lineHeight: "38px", letterSpacing: "-0.02em", fontWeight: "700" }], "headline-lg-mobile": ["28px", { lineHeight: "34px", letterSpacing: "-0.02em", fontWeight: "700" }], "body-md": ["14px", { lineHeight: "20px", fontWeight: "400" }], "body-lg": ["16px", { lineHeight: "24px", fontWeight: "400" }], "label-md": ["12px", { lineHeight: "16px", letterSpacing: "0.02em", fontWeight: "600" }], "label-sm": ["10px", { lineHeight: "12px", letterSpacing: "0.04em", fontWeight: "700" }], "body-sm": ["13px", { lineHeight: "18px", fontWeight: "500" }], "title-md": ["16px", { lineHeight: "22px", letterSpacing: "-0.005em", fontWeight: "600" }], "display-lg": ["40px", { lineHeight: "48px", letterSpacing: "-0.03em", fontWeight: "700" }] } } } };</script><style>@layer base{html,body{width:100vw;min-height:100vh;margin:0;padding:0;background-color:#EBE9E1;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:calc(env(safe-area-inset-bottom, 0px) + 1.25rem);}.pt-safe{padding-top:env(safe-area-inset-top, 0px);}}::-webkit-scrollbar{display:none;}</style></head><body class="bg-canvas-cream font-body-md text-text-primary antialiased flex flex-col min-h-screen relative selection:bg-accent-coral selection:text-text-light"><header class="fixed top-0 w-full z-50 bg-canvas-cream/85 backdrop-blur-xl pt-safe shadow-[0_1px_12px_rgba(25,25,25,0.04)]"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm"><div class="w-9 h-9 rounded-xl bg-surface-dark flex items-center justify-center shadow-[0_4px_12px_rgba(0,0,0,0.18)]"><span class="material-symbols-outlined text-accent-coral text-[20px]">cyclone</span></div><div class="flex flex-col"><div class="flex items-center gap-1.5"><span class="font-title-md text-title-md text-surface-dark tracking-tight leading-none">VORTEX</span><span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded-full bg-surface-dark text-text-light uppercase tracking-wider">PRO</span></div><span class="font-label-sm text-label-sm text-text-secondary uppercase tracking-wider">Broker/Portfolio</span></div></div><div class="flex items-center gap-space-sm"><div class="hidden sm:flex items-center gap-1.5 bg-surface-taupe/20 px-2.5 py-1 rounded-full"><span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span><span class="font-label-sm text-label-sm text-surface-dark font-medium">LIVE</span><span class="text-text-secondary text-[10px]">•</span><span class="font-label-sm text-label-sm text-text-secondary font-mono">WIB 14:32</span></div><button aria-label="Active WIB Market Session" class="sm:hidden flex items-center gap-1.5 bg-surface-taupe/25 px-2 py-1 rounded-full min-h-[44px] min-w-[44px] justify-center" type="button"><span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span><span class="font-label-sm text-label-sm text-surface-dark font-mono">WIB</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-sm shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 w-full max-w-lg mx-auto px-margin pt-16 pb-32 bg-canvas-cream flex flex-col"><div class="flex flex-col w-full space-y-space-md">
+<!-- Top Sentinel Pill Banner -->
+<section class="w-full bg-surface-dark text-text-light rounded-xl p-space-sm shadow-[0_16px_36px_-8px_rgba(0,0,0,0.22)] flex items-center justify-between gap-space-xs">
+<div class="flex items-center gap-space-xs min-w-0">
+<div class="w-8 h-8 rounded-lg bg-surface-taupe/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-accent-coral text-[18px]" style="font-variation-settings: 'FILL' 1;">shield_lock</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5 truncate">
+<span class="font-title-md text-title-md text-text-light truncate">Sentinel Locked</span>
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span>
+</div>
+<p class="font-label-sm text-label-sm text-surface-taupe truncate">Margin 1,027.5% • 14ms FIX</p>
+</div>
+</div>
+<div class="flex items-center gap-1 shrink-0 bg-surface-taupe/15 px-2.5 py-1 rounded-full">
+<span class="font-label-sm text-label-sm text-accent-coral font-bold tracking-wider">OPTIMAL</span>
+</div>
+</section>
+<!-- Emergency Killswitch Banner Card -->
+<section class="w-full bg-surface-container rounded-xl p-space-sm shadow-sm flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs min-w-0">
+<div class="w-2.5 h-2.5 rounded-full bg-accent-coral animate-pulse shrink-0"></div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-text-primary uppercase tracking-wider">Automated Risk Safeguard</span>
+<span class="font-label-sm text-label-sm text-text-secondary truncate">Flatten 4 open positions instantly</span>
+</div>
+</div>
+<button class="shrink-0 h-10 px-3.5 bg-accent-coral text-text-light font-title-md text-title-md rounded-full flex items-center gap-1.5 shadow-[0_12px_28px_-4px_rgba(255,77,77,0.35)] active:scale-95 transition-all" id="emergency-flatten-btn" type="button">
+<span class="material-symbols-outlined text-[18px]">power_settings_new</span>
+<span>Flatten All</span>
+</button>
+</section>
+<!-- Main Hero Balance & Margin Overview Bento -->
+<section class="w-full bg-surface-dark text-text-light rounded-xl p-space-md shadow-[0_16px_36px_-8px_rgba(0,0,0,0.22)] relative overflow-hidden">
+<div class="flex justify-between items-start mb-space-sm">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-surface-taupe uppercase tracking-wider">Institutional Floating Equity</span>
+<div class="flex items-baseline gap-space-xs mt-0.5">
+<span class="font-display-lg text-headline-lg-mobile text-text-light tracking-tight font-bold">$86,210.40</span>
+</div>
+</div>
+<div class="flex items-center gap-1 bg-emerald-500/20 text-emerald-400 px-2 py-1 rounded-full">
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span>
+<span class="font-label-sm text-label-sm font-bold">+$1,660.40</span>
+</div>
+</div>
+<!-- Margin Level Gauge Bar -->
+<div class="bg-surface-taupe/15 rounded-lg p-space-sm mb-space-md">
+<div class="flex justify-between items-center mb-1">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-surface-taupe uppercase tracking-wide">Margin Sentinel Gauge</span>
+<span class="font-label-sm text-label-sm text-text-light bg-surface-dark px-1.5 py-0.5 rounded font-bold">1,027.5%</span>
+</div>
+<span class="font-label-sm text-label-sm text-emerald-400 font-semibold">Tier-1 Safe</span>
+</div>
+<div class="w-full h-2 bg-surface-taupe/30 rounded-full overflow-hidden flex">
+<div class="h-full bg-emerald-400 rounded-full" style="width: 88%"></div>
+</div>
+<div class="flex justify-between items-center text-[10px] text-surface-taupe mt-1 font-mono">
+<span>100% Margin Call</span>
+<span>500% Standard</span>
+<span>1000%+ Prime Safe</span>
+</div>
+</div>
+<!-- 3-Column Metrics Row -->
+<div class="grid grid-cols-3 gap-space-xs text-left pt-space-xs">
+<div class="bg-surface-taupe/10 rounded-lg p-2.5 flex flex-col">
+<span class="font-label-sm text-label-sm text-surface-taupe">Account Cash</span>
+<span class="font-title-md text-title-md text-text-light mt-0.5 font-bold truncate">$84,550.00</span>
+</div>
+<div class="bg-surface-taupe/10 rounded-lg p-2.5 flex flex-col">
+<span class="font-label-sm text-label-sm text-surface-taupe">Margin Used</span>
+<span class="font-title-md text-title-md text-accent-coral mt-0.5 font-bold truncate">$8,390.30</span>
+</div>
+<div class="bg-surface-taupe/10 rounded-lg p-2.5 flex flex-col">
+<span class="font-label-sm text-label-sm text-surface-taupe">Free Margin</span>
+<span class="font-title-md text-title-md text-text-light mt-0.5 font-bold truncate">$77,820.10</span>
+</div>
+</div>
+</section>
+<!-- Multi-Broker Infrastructure Rail -->
+<section class="w-full bg-surface-container rounded-xl p-space-sm shadow-sm">
+<div class="flex items-center justify-between mb-space-xs">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-surface-dark text-[18px]">hub</span>
+<span class="font-label-md text-label-md text-text-primary uppercase tracking-wider">Multi-Broker Bridges</span>
+</div>
+<span class="font-label-sm text-label-sm text-text-secondary font-mono">3 Sockets Linked</span>
+</div>
+<div class="grid grid-cols-3 gap-space-xs">
+<!-- IBKR -->
+<div class="bg-surface-container-lowest rounded-lg p-2 flex flex-col shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-text-primary font-bold truncate">IBKR Pro</span>
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+</div>
+<div class="flex items-center justify-between mt-1">
+<span class="font-label-sm text-label-sm text-emerald-600">Active</span>
+<span class="font-label-sm text-label-sm text-text-secondary font-mono">18ms</span>
+</div>
+</div>
+<!-- cTrader -->
+<div class="bg-surface-container-lowest rounded-lg p-2 flex flex-col shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-text-primary font-bold truncate">cTrader Inst.</span>
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+</div>
+<div class="flex items-center justify-between mt-1">
+<span class="font-label-sm text-label-sm text-emerald-600">Active</span>
+<span class="font-label-sm text-label-sm text-text-secondary font-mono">24ms</span>
+</div>
+</div>
+<!-- MT5 -->
+<div class="bg-surface-container-lowest rounded-lg p-2 flex flex-col shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-text-primary font-bold truncate">MT5 Prime</span>
+<span class="w-1.5 h-1.5 rounded-full bg-surface-taupe"></span>
+</div>
+<div class="flex items-center justify-between mt-1">
+<span class="font-label-sm text-label-sm text-text-secondary">Standby</span>
+<span class="font-label-sm text-label-sm text-text-secondary font-mono">--</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Active Working Positions Section -->
+<section class="w-full flex flex-col space-y-space-xs">
+<div class="flex items-center justify-between px-1">
+<div class="flex items-center gap-1.5">
+<span class="font-title-md text-title-md text-surface-dark">Active Working Positions</span>
+<span class="font-label-sm text-label-sm bg-surface-dark text-text-light px-2 py-0.5 rounded-full font-bold">4 Live</span>
+</div>
+<span class="font-label-sm text-label-sm text-text-secondary font-mono">Aggregated Lot: 104.0</span>
+</div>
+<!-- Position 1: XAU/USD -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-sm shadow-[0_8px_24px_-4px_rgba(25,25,25,0.06)] flex flex-col space-y-2">
+<div class="flex justify-between items-start">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-surface-dark text-accent-coral flex items-center justify-center font-bold font-title-md text-title-md">
+            Au
+          </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-title-md text-title-md text-text-primary font-bold">XAU/USD</span>
+<span class="font-label-sm text-label-sm text-emerald-700 bg-emerald-100 px-1.5 py-0.2 rounded font-semibold">BUY 1.50</span>
+</div>
+<span class="font-label-sm text-label-sm text-text-secondary font-mono">IBKR Pro • SL 2,315.00 / TP 2,350.00</span>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-title-md text-title-md text-emerald-600 font-bold font-mono">+$1,185.00</span>
+<span class="font-label-sm text-label-sm text-text-secondary font-mono">Vol: 150 oz</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1 gap-2">
+<div class="flex items-center gap-1 text-[11px] text-text-secondary">
+<span class="material-symbols-outlined text-[14px] text-emerald-600">verified</span>
+<span>Risk Capped 1.1%</span>
+</div>
+<div class="flex items-center gap-1.5">
+<button class="be-btn h-7 px-3 bg-surface-container text-surface-dark font-label-sm text-label-sm rounded-full active:scale-95 transition-all" type="button">Move BE</button>
+<button class="close-btn h-7 px-3 bg-surface-dark text-text-light font-label-sm text-label-sm rounded-full active:scale-95 transition-all" type="button">Close</button>
+</div>
+</div>
+</div>
+<!-- Position 2: EUR/USD -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-sm shadow-[0_8px_24px_-4px_rgba(25,25,25,0.06)] flex flex-col space-y-2">
+<div class="flex justify-between items-start">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-surface-dark text-text-light flex items-center justify-center font-bold font-title-md text-title-md">
+            €
+          </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-title-md text-title-md text-text-primary font-bold">EUR/USD</span>
+<span class="font-label-sm text-label-sm text-accent-coral bg-red-100 px-1.5 py-0.2 rounded font-semibold">SELL 2.00</span>
+</div>
+<span class="font-label-sm text-label-sm text-text-secondary font-mono">cTrader Inst. • Entry 1.08420</span>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-title-md text-title-md text-emerald-600 font-bold font-mono">+$260.00</span>
+<span class="font-label-sm text-label-sm text-text-secondary font-mono">200k Units</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1 gap-2">
+<div class="flex items-center gap-1 text-[11px] text-text-secondary">
+<span class="material-symbols-outlined text-[14px] text-emerald-600">verified</span>
+<span>In Profit (+13 pips)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<button class="be-btn h-7 px-3 bg-surface-container text-surface-dark font-label-sm text-label-sm rounded-full active:scale-95 transition-all" type="button">Move BE</button>
+<button class="close-btn h-7 px-3 bg-surface-dark text-text-light font-label-sm text-label-sm rounded-full active:scale-95 transition-all" type="button">Close</button>
+</div>
+</div>
+</div>
+<!-- Position 3: BBCA.JK -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-sm shadow-[0_8px_24px_-4px_rgba(25,25,25,0.06)] flex flex-col space-y-2">
+<div class="flex justify-between items-start">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-surface-dark text-emerald-400 flex items-center justify-center font-bold font-title-md text-title-md">
+            JK
+          </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-title-md text-title-md text-text-primary font-bold">BBCA.JK</span>
+<span class="font-label-sm text-label-sm text-emerald-700 bg-emerald-100 px-1.5 py-0.2 rounded font-semibold">BUY 100</span>
+</div>
+<span class="font-label-sm text-label-sm text-text-secondary font-mono">IDX Direct • WIB Session</span>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-title-md text-title-md text-emerald-600 font-bold font-mono">+$485.40</span>
+<span class="font-label-sm text-label-sm text-text-secondary font-mono">10,000 Shs</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1 gap-2">
+<div class="flex items-center gap-1 text-[11px] text-text-secondary">
+<span class="material-symbols-outlined text-[14px] text-emerald-600">verified</span>
+<span>Cash Backed Equities</span>
+</div>
+<div class="flex items-center gap-1.5">
+<button class="be-btn h-7 px-3 bg-surface-container text-surface-dark font-label-sm text-label-sm rounded-full active:scale-95 transition-all" type="button">Move BE</button>
+<button class="close-btn h-7 px-3 bg-surface-dark text-text-light font-label-sm text-label-sm rounded-full active:scale-95 transition-all" type="button">Close</button>
+</div>
+</div>
+</div>
+<!-- Position 4: BTC/USD -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-sm shadow-[0_8px_24px_-4px_rgba(25,25,25,0.06)] flex flex-col space-y-2">
+<div class="flex justify-between items-start">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-surface-dark text-amber-400 flex items-center justify-center font-bold font-title-md text-title-md">
+            ₿
+          </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-title-md text-title-md text-text-primary font-bold">BTC/USD</span>
+<span class="font-label-sm text-label-sm text-accent-coral bg-red-100 px-1.5 py-0.2 rounded font-semibold">SELL 0.50</span>
+</div>
+<span class="font-label-sm text-label-sm text-text-secondary font-mono">cTrader Inst. • Delta Neutral Hedge</span>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-title-md text-title-md text-accent-coral font-bold font-mono">-$270.00</span>
+<span class="font-label-sm text-label-sm text-text-secondary font-mono">0.50 Coin</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1 gap-2">
+<div class="flex items-center gap-1 text-[11px] text-accent-coral">
+<span class="material-symbols-outlined text-[14px]">warning</span>
+<span>Floating -0.31%</span>
+</div>
+<div class="flex items-center gap-1.5">
+<button class="be-btn h-7 px-3 bg-surface-container text-surface-dark font-label-sm text-label-sm rounded-full active:scale-95 transition-all" type="button">Move BE</button>
+<button class="close-btn h-7 px-3 bg-surface-dark text-text-light font-label-sm text-label-sm rounded-full active:scale-95 transition-all" type="button">Close</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Emergency Modal Feedback Dialog (Hidden by Default) -->
+<div class="hidden fixed inset-0 z-50 bg-surface-dark/60 backdrop-blur-sm flex items-center justify-center p-margin" id="flatten-modal">
+<div class="bg-surface-container-lowest rounded-xl p-space-md w-full max-w-sm flex flex-col items-center text-center shadow-2xl">
+<div class="w-12 h-12 rounded-full bg-error-container text-accent-coral flex items-center justify-center mb-space-sm">
+<span class="material-symbols-outlined text-[28px]">emergency_home</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-text-primary mb-1">Confirm Emergency Flatten</h3>
+<p class="font-body-md text-body-md text-text-secondary mb-space-md">This action fires market exit orders on all 4 open positions across IBKR and cTrader simultaneously.</p>
+<div class="flex items-center gap-space-xs w-full">
+<button class="flex-1 h-11 bg-surface-container text-surface-dark font-title-md text-title-md rounded-full active:scale-95 transition-all" id="cancel-flatten-btn" type="button">Cancel</button>
+<button class="flex-1 h-11 bg-accent-coral text-text-light font-title-md text-title-md rounded-full active:scale-95 transition-all shadow-[0_8px_20px_-4px_rgba(255,77,77,0.4)]" id="confirm-flatten-btn" type="button">Flatten (4)</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    const flattenBtn = document.getElementById('emergency-flatten-btn');
+    const modal = document.getElementById('flatten-modal');
+    const cancelBtn = document.getElementById('cancel-flatten-btn');
+    const confirmBtn = document.getElementById('confirm-flatten-btn');
+
+    if (flattenBtn && modal && cancelBtn && confirmBtn) {
+      flattenBtn.addEventListener('click', () => {
+        modal.classList.remove('hidden');
+      });
+      cancelBtn.addEventListener('click', () => {
+        modal.classList.add('hidden');
+      });
+      confirmBtn.addEventListener('click', () => {
+        confirmBtn.textContent = 'Transmitting FIX...';
+        setTimeout(() => {
+          modal.classList.add('hidden');
+          confirmBtn.textContent = 'Flatten (4)';
+          alert('Emergency Sentinel Protocol Executed: 4 Orders Flattened at Market.');
+        }, 600);
+      });
+    }
+
+    document.querySelectorAll('.be-btn').forEach(button => {
+      button.addEventListener('click', function() {
+        const originalText = this.textContent;
+        this.textContent = 'SL = BE ✓';
+        this.classList.add('bg-emerald-100', 'text-emerald-800');
+        setTimeout(() => {
+          this.textContent = originalText;
+          this.classList.remove('bg-emerald-100', 'text-emerald-800');
+        }, 2200);
+      });
+    });
+
+    document.querySelectorAll('.close-btn').forEach(button => {
+      button.addEventListener('click', function() {
+        const card = this.closest('.w-full.bg-surface-container-lowest');
+        if (card) {
+          card.style.opacity = '0.4';
+          this.textContent = 'Closing...';
+          setTimeout(() => {
+            card.style.display = 'none';
+          }, 350);
+        }
+      });
+    });
+  })();
+</script></main><div class="fixed bottom-0 w-full z-50 pointer-events-none pb-safe"><div class="max-w-md mx-auto px-margin flex items-center justify-between gap-space-sm"><nav class="pointer-events-auto flex-1 h-16 rounded-full bg-surface-dark/95 backdrop-blur-xl p-1.5 flex items-center justify-around shadow-[0_20px_40px_-6px_rgba(25,25,25,0.28)]" data-active-classes="bg-text-light text-surface-dark font-semibold shadow-[0_4px_16px_rgba(0,0,0,0.18)]"><a class="min-w-[44px] min-h-[44px] px-3.5 py-2 rounded-full flex items-center justify-center gap-1.5 text-text-light/50 hover:text-text-light transition-all duration-200" data-path="chart" href="#"><span class="material-symbols-outlined text-[20px]">candlestick_chart</span><span class="font-label-md text-label-md hidden md:inline">Chart</span></a><a class="min-w-[44px] min-h-[44px] px-3.5 py-2 rounded-full flex items-center justify-center gap-1.5 text-text-light/50 hover:text-text-light transition-all duration-200" data-path="journal" href="#"><span class="material-symbols-outlined text-[20px]">history_edu</span><span class="font-label-md text-label-md hidden md:inline">Journal</span></a><a class="min-w-[44px] min-h-[44px] px-3.5 py-2 rounded-full flex items-center justify-center gap-1.5 text-text-light/50 hover:text-text-light transition-all duration-200" data-path="macro" href="#"><span class="material-symbols-outlined text-[20px]">public</span><span class="font-label-md text-label-md hidden md:inline">Macro</span></a><a class="min-w-[44px] min-h-[44px] px-3.5 py-2 rounded-full flex items-center justify-center gap-1.5 text-text-light/50 hover:text-text-light transition-all duration-200" data-path="broker-portfolio" href="#"><span class="material-symbols-outlined text-[20px]">account_balance_wallet</span><span class="font-label-md text-label-md hidden md:inline">Broker</span></a></nav><button aria-label="Send Signal Quick Order" class="pointer-events-auto shrink-0 w-14 h-14 min-w-[44px] min-h-[44px] rounded-full bg-accent-coral text-text-light flex items-center justify-center shadow-[0_12px_28px_-4px_rgba(255,77,77,0.45)] active:scale-95 transition-transform duration-150" type="button"><span class="material-symbols-outlined text-[24px]">bolt</span></button></div></div></body></html>

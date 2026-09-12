@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><title>Vortex Terminal</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "canvas-cream": "#EBE9E1", "surface-container": "#f0eee6", "on-background": "#1b1c17", "surface-container-low": "#f6f4eb", "primary-fixed-dim": "#ffb3ae", "background": "#fcf9f1", "outline-variant": "#e4beba", "tertiary-container": "#76756e", "inverse-on-surface": "#f3f1e9", "on-surface-variant": "#5b403e", "primary-container": "#db3237", "surface-bright": "#fcf9f1", "secondary": "#5f5e5e", "on-tertiary-fixed-variant": "#474742", "surface-container-lowest": "#ffffff", "error": "#ba1a1a", "secondary-fixed": "#e5e2e1", "surface-container-high": "#eae8e0", "on-surface": "#1b1c17", "primary-fixed": "#ffdad7", "surface-variant": "#e4e2db", "on-error": "#ffffff", "error-container": "#ffdad6", "secondary-container": "#e2dfde", "on-secondary": "#ffffff", "tertiary": "#5d5c56", "surface-dark": "#191919", "text-primary": "#0F0F0F", "tertiary-fixed-dim": "#c9c6bf", "surface-tint": "#ba1724", "text-secondary": "#7E7E7A", "inverse-primary": "#ffb3ae", "accent-coral": "#FF4D4D", "on-secondary-fixed-variant": "#474746", "on-secondary-fixed": "#1c1b1b", "on-primary-fixed-variant": "#930014", "secondary-fixed-dim": "#c8c6c5", "on-error-container": "#93000a", "text-light": "#FFFFFF", "surface-taupe": "#B5B3AC", "surface-dim": "#dcdad2", "inverse-surface": "#30312c", "surface": "#fcf9f1", "on-secondary-container": "#636262", "outline": "#8f6f6d", "on-tertiary-fixed": "#1c1c17", "primary": "#b71422", "surface-container-highest": "#e4e2db", "on-primary-fixed": "#410004", "on-tertiary-container": "#fdffdc", "tertiary-fixed": "#e5e2db", "on-tertiary": "#ffffff", "on-primary": "#ffffff", "on-primary-container": "#fffbff" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-xl": "1.75rem", "gutter-desktop": "1.5rem", "space-sm": "0.5rem", "margin-desktop": "2.5rem", "space-md": "1rem", "space-2xl": "2.5rem", "space-xs": "0.25rem", "space-lg": "1.25rem", "margin": "1.25rem", "gutter": "1rem" }, fontFamily: { "headline-md": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "body-md": ["Inter"], "body-lg": ["Inter"], "label-md": ["Inter"], "label-sm": ["Inter"], "body-sm": ["Inter"], "title-md": ["Plus Jakarta Sans"], "display-lg": ["Plus Jakarta Sans"] }, fontSize: { "headline-md": ["20px", { lineHeight: "26px", letterSpacing: "-0.01em", fontWeight: "600" }], "headline-lg": ["32px", { lineHeight: "38px", letterSpacing: "-0.02em", fontWeight: "700" }], "headline-lg-mobile": ["28px", { lineHeight: "34px", letterSpacing: "-0.02em", fontWeight: "700" }], "body-md": ["14px", { lineHeight: "20px", fontWeight: "400" }], "body-lg": ["16px", { lineHeight: "24px", fontWeight: "400" }], "label-md": ["12px", { lineHeight: "16px", letterSpacing: "0.02em", fontWeight: "600" }], "label-sm": ["10px", { lineHeight: "12px", letterSpacing: "0.04em", fontWeight: "700" }], "body-sm": ["13px", { lineHeight: "18px", fontWeight: "500" }], "title-md": ["16px", { lineHeight: "22px", letterSpacing: "-0.005em", fontWeight: "600" }], "display-lg": ["40px", { lineHeight: "48px", letterSpacing: "-0.03em", fontWeight: "700" }] } } } };</script><style>@layer base{html,body{width:100vw;min-height:100vh;margin:0;padding:0;background-color:#EBE9E1;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:calc(env(safe-area-inset-bottom, 0px) + 1.25rem);}.pt-safe{padding-top:env(safe-area-inset-top, 0px);}}::-webkit-scrollbar{display:none;}</style></head><body class="bg-canvas-cream font-body-md text-text-primary antialiased flex flex-col min-h-screen relative selection:bg-accent-coral selection:text-text-light"><header class="fixed top-0 w-full z-50 bg-canvas-cream/85 backdrop-blur-xl pt-safe shadow-[0_1px_12px_rgba(25,25,25,0.04)]"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm"><div class="w-9 h-9 rounded-xl bg-surface-dark flex items-center justify-center shadow-[0_4px_12px_rgba(0,0,0,0.18)]"><span class="material-symbols-outlined text-accent-coral text-[20px]">cyclone</span></div><div class="flex flex-col"><div class="flex items-center gap-1.5"><span class="font-title-md text-title-md text-surface-dark tracking-tight leading-none">VORTEX</span><span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded-full bg-surface-dark text-text-light uppercase tracking-wider">PRO</span></div><span class="font-label-sm text-label-sm text-text-secondary uppercase tracking-wider">Journal</span></div></div><div class="flex items-center gap-space-sm"><div class="hidden sm:flex items-center gap-1.5 bg-surface-taupe/20 px-2.5 py-1 rounded-full"><span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span><span class="font-label-sm text-label-sm text-surface-dark font-medium">LIVE</span><span class="text-text-secondary text-[10px]">•</span><span class="font-label-sm text-label-sm text-text-secondary font-mono">WIB 14:32</span></div><button aria-label="Active WIB Market Session" class="sm:hidden flex items-center gap-1.5 bg-surface-taupe/25 px-2 py-1 rounded-full min-h-[44px] min-w-[44px] justify-center" type="button"><span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span><span class="font-label-sm text-label-sm text-surface-dark font-mono">WIB</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-sm shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 w-full max-w-lg mx-auto px-margin pt-16 pb-32 bg-canvas-cream flex flex-col"><div class="flex flex-col w-full space-y-space-md">
+<!-- Month Navigation & Audit Badge -->
+<div class="flex items-center justify-between bg-surface-container rounded-2xl p-space-sm shadow-sm">
+<div class="flex items-center gap-space-xs">
+<button aria-label="Previous Month" class="w-10 h-10 rounded-full flex items-center justify-center text-text-secondary active:scale-95 transition-transform bg-canvas-cream" type="button">
+<span class="material-symbols-outlined text-[20px]">chevron_left</span>
+</button>
+<div class="flex flex-col px-1">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-md text-headline-md text-surface-dark">October 2024</span>
+<span class="material-symbols-outlined text-accent-coral text-[18px]" title="Institutional Verified">verified</span>
+</div>
+<span class="font-label-sm text-label-sm text-text-secondary uppercase">Institutional Prime Audit</span>
+</div>
+</div>
+<div class="flex items-center gap-1 bg-surface-dark text-text-light px-2.5 py-1.5 rounded-full shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+<span class="font-label-sm text-label-sm tracking-wide font-medium uppercase">Audited</span>
+</div>
+</div>
+<!-- Realized PnL Hero Statement Card -->
+<div class="bg-surface-dark text-text-light rounded-3xl p-5 shadow-[0_16px_36px_-8px_rgba(0,0,0,0.22)] relative overflow-hidden">
+<div class="absolute -right-8 -bottom-8 w-36 h-36 bg-accent-coral/10 rounded-full blur-2xl pointer-events-none"></div>
+<div class="flex items-start justify-between mb-3 relative z-10">
+<div>
+<span class="font-label-md text-label-md text-text-secondary uppercase tracking-wider block">Net Realized PnL</span>
+<div class="flex items-baseline gap-2 mt-0.5">
+<span class="font-display-lg text-display-lg tracking-tight text-text-light">+$18,420.50</span>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-400 font-label-sm text-label-sm font-semibold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">trending_up</span>
+        +14.2% MoM
+      </span>
+</div>
+<!-- Micro KPIs Row Inside Hero -->
+<div class="grid grid-cols-3 gap-2 pt-3 bg-surface-dark/40 rounded-xl relative z-10">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-text-secondary">Gross Won</span>
+<span class="font-title-md text-title-md text-emerald-400">+$24,110</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-text-secondary">Gross Lost</span>
+<span class="font-title-md text-title-md text-accent-coral">-$5,689</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-text-secondary">Max DD</span>
+<span class="font-title-md text-title-md text-text-light">-3.8%</span>
+</div>
+</div>
+</div>
+<!-- Secondary Metrics Grid 3 Cards -->
+<div class="grid grid-cols-3 gap-space-sm">
+<!-- Win Rate -->
+<div class="bg-surface-container rounded-2xl p-3.5 flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-text-secondary uppercase">Win Rate</span>
+<span class="material-symbols-outlined text-[16px] text-text-secondary">pie_chart</span>
+</div>
+<div class="mt-2">
+<span class="font-headline-md text-headline-md text-surface-dark block">68.4%</span>
+<span class="font-label-sm text-label-sm text-text-secondary">26W / 12L</span>
+</div>
+</div>
+<!-- Profit Factor -->
+<div class="bg-surface-container rounded-2xl p-3.5 flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-text-secondary uppercase">Profit Factor</span>
+<span class="material-symbols-outlined text-[16px] text-accent-coral">tune</span>
+</div>
+<div class="mt-2">
+<span class="font-headline-md text-headline-md text-surface-dark block">2.64</span>
+<span class="font-label-sm text-label-sm text-emerald-600 font-semibold">Exceptional</span>
+</div>
+</div>
+<!-- Avg R:R -->
+<div class="bg-surface-container rounded-2xl p-3.5 flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-text-secondary uppercase">Avg R:R</span>
+<span class="material-symbols-outlined text-[16px] text-text-secondary">scale</span>
+</div>
+<div class="mt-2">
+<span class="font-headline-md text-headline-md text-surface-dark block">1:2.85</span>
+<span class="font-label-sm text-label-sm text-text-secondary">Risk adjusted</span>
+</div>
+</div>
+</div>
+<!-- Interactive Monthly Calendar Matrix -->
+<div class="bg-surface-container rounded-3xl p-4 shadow-sm flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-accent-coral"></span>
+<span class="font-title-md text-title-md text-surface-dark">Execution Heatmap</span>
+</div>
+<div class="flex items-center gap-2 font-label-sm text-label-sm text-text-secondary">
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-sm bg-emerald-500"></span> Profit</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-sm bg-accent-coral"></span> Loss</span>
+</div>
+</div>
+<!-- Day of Week Header -->
+<div class="grid grid-cols-7 gap-1 text-center font-label-sm text-label-sm text-text-secondary">
+<div>M</div><div>T</div><div>W</div><div>T</div><div>F</div><div>S</div><div>S</div>
+</div>
+<!-- Calendar Grid Cells -->
+<div class="grid grid-cols-7 gap-1" id="calendar-grid">
+<!-- Week 1 -->
+<div class="aspect-square bg-canvas-cream/40 rounded-xl p-1 flex flex-col justify-between opacity-30">
+<span class="font-label-sm text-label-sm">30</span>
+</div>
+<div class="aspect-square bg-canvas-cream rounded-xl p-1 flex flex-col justify-between cursor-pointer hover:scale-95 transition-transform" data-day="1">
+<span class="font-label-sm text-label-sm text-text-secondary">1</span>
+<span class="font-label-sm text-[9px] text-emerald-600 font-bold leading-none">+$620</span>
+</div>
+<div class="aspect-square bg-canvas-cream rounded-xl p-1 flex flex-col justify-between cursor-pointer hover:scale-95 transition-transform" data-day="2">
+<span class="font-label-sm text-label-sm text-text-secondary">2</span>
+<span class="font-label-sm text-[9px] text-emerald-600 font-bold leading-none">+$1.1k</span>
+</div>
+<div class="aspect-square bg-canvas-cream rounded-xl p-1 flex flex-col justify-between cursor-pointer hover:scale-95 transition-transform" data-day="3">
+<span class="font-label-sm text-label-sm text-text-secondary">3</span>
+<span class="font-label-sm text-[9px] text-accent-coral font-bold leading-none">-$340</span>
+</div>
+<div class="aspect-square bg-canvas-cream rounded-xl p-1 flex flex-col justify-between cursor-pointer hover:scale-95 transition-transform" data-day="4">
+<span class="font-label-sm text-label-sm text-text-secondary">4</span>
+<span class="font-label-sm text-[9px] text-emerald-600 font-bold leading-none">+$840</span>
+</div>
+<div class="aspect-square bg-surface-taupe/15 rounded-xl p-1 flex flex-col justify-between opacity-50">
+<span class="font-label-sm text-label-sm text-text-secondary">5</span>
+</div>
+<div class="aspect-square bg-surface-taupe/15 rounded-xl p-1 flex flex-col justify-between opacity-50">
+<span class="font-label-sm text-label-sm text-text-secondary">6</span>
+</div>
+<!-- Week 2 -->
+<div class="aspect-square bg-canvas-cream rounded-xl p-1 flex flex-col justify-between cursor-pointer hover:scale-95 transition-transform" data-day="7">
+<span class="font-label-sm text-label-sm text-text-secondary">7</span>
+<span class="font-label-sm text-[9px] text-emerald-600 font-bold leading-none">+$410</span>
+</div>
+<div class="aspect-square bg-canvas-cream rounded-xl p-1 flex flex-col justify-between cursor-pointer hover:scale-95 transition-transform" data-day="8">
+<span class="font-label-sm text-label-sm text-text-secondary">8</span>
+<span class="font-label-sm text-[9px] text-text-secondary leading-none">BE</span>
+</div>
+<div class="aspect-square bg-canvas-cream rounded-xl p-1 flex flex-col justify-between cursor-pointer hover:scale-95 transition-transform" data-day="9">
+<span class="font-label-sm text-label-sm text-text-secondary">9</span>
+<span class="font-label-sm text-[9px] text-emerald-600 font-bold leading-none">+$1.4k</span>
+</div>
+<div class="aspect-square bg-canvas-cream rounded-xl p-1 flex flex-col justify-between cursor-pointer hover:scale-95 transition-transform" data-day="10">
+<span class="font-label-sm text-label-sm text-text-secondary">10</span>
+<span class="font-label-sm text-[9px] text-accent-coral font-bold leading-none">-$850</span>
+</div>
+<div class="aspect-square bg-canvas-cream rounded-xl p-1 flex flex-col justify-between cursor-pointer hover:scale-95 transition-transform" data-day="11">
+<span class="font-label-sm text-label-sm text-text-secondary">11</span>
+<span class="font-label-sm text-[9px] text-emerald-600 font-bold leading-none">+$920</span>
+</div>
+<div class="aspect-square bg-surface-taupe/15 rounded-xl p-1 flex flex-col justify-between opacity-50">
+<span class="font-label-sm text-label-sm text-text-secondary">12</span>
+</div>
+<div class="aspect-square bg-surface-taupe/15 rounded-xl p-1 flex flex-col justify-between opacity-50">
+<span class="font-label-sm text-label-sm text-text-secondary">13</span>
+</div>
+<!-- Week 3 -->
+<div class="aspect-square bg-canvas-cream rounded-xl p-1 flex flex-col justify-between cursor-pointer hover:scale-95 transition-transform" data-day="14">
+<span class="font-label-sm text-label-sm text-text-secondary">14</span>
+<span class="font-label-sm text-[9px] text-emerald-600 font-bold leading-none">+$730</span>
+</div>
+<div class="aspect-square bg-canvas-cream rounded-xl p-1 flex flex-col justify-between cursor-pointer hover:scale-95 transition-transform" data-day="15">
+<span class="font-label-sm text-label-sm text-text-secondary">15</span>
+<span class="font-label-sm text-[9px] text-emerald-600 font-bold leading-none">+$1.8k</span>
+</div>
+<div class="aspect-square bg-canvas-cream rounded-xl p-1 flex flex-col justify-between cursor-pointer hover:scale-95 transition-transform" data-day="16">
+<span class="font-label-sm text-label-sm text-text-secondary">16</span>
+<span class="font-label-sm text-[9px] text-accent-coral font-bold leading-none">-$210</span>
+</div>
+<div class="aspect-square bg-canvas-cream rounded-xl p-1 flex flex-col justify-between cursor-pointer hover:scale-95 transition-transform" data-day="17">
+<span class="font-label-sm text-label-sm text-text-secondary">17</span>
+<span class="font-label-sm text-[9px] text-emerald-600 font-bold leading-none">+$3.1k</span>
+</div>
+<div class="aspect-square bg-canvas-cream rounded-xl p-1 flex flex-col justify-between cursor-pointer hover:scale-95 transition-transform" data-day="18">
+<span class="font-label-sm text-label-sm text-text-secondary">18</span>
+<span class="font-label-sm text-[9px] text-emerald-600 font-bold leading-none">+$560</span>
+</div>
+<div class="aspect-square bg-surface-taupe/15 rounded-xl p-1 flex flex-col justify-between opacity-50">
+<span class="font-label-sm text-label-sm text-text-secondary">19</span>
+</div>
+<div class="aspect-square bg-surface-taupe/15 rounded-xl p-1 flex flex-col justify-between opacity-50">
+<span class="font-label-sm text-label-sm text-text-secondary">20</span>
+</div>
+<!-- Week 4 - Active Selection on Oct 21 -->
+<div class="aspect-square bg-surface-dark text-text-light rounded-xl p-1 flex flex-col justify-between ring-2 ring-accent-coral shadow-md cursor-pointer transform scale-105 transition-transform z-10" data-day="21" id="active-calendar-day">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-accent-coral font-bold">21</span>
+<span class="w-1.5 h-1.5 rounded-full bg-accent-coral"></span>
+</div>
+<span class="font-label-sm text-[9px] text-emerald-400 font-bold leading-none">+$2.2k</span>
+</div>
+<div class="aspect-square bg-canvas-cream rounded-xl p-1 flex flex-col justify-between cursor-pointer hover:scale-95 transition-transform" data-day="22">
+<span class="font-label-sm text-label-sm text-text-secondary">22</span>
+<span class="font-label-sm text-[9px] text-emerald-600 font-bold leading-none">+$1.1k</span>
+</div>
+<div class="aspect-square bg-canvas-cream rounded-xl p-1 flex flex-col justify-between cursor-pointer hover:scale-95 transition-transform" data-day="23">
+<span class="font-label-sm text-label-sm text-text-secondary">23</span>
+<span class="font-label-sm text-[9px] text-accent-coral font-bold leading-none">-$420</span>
+</div>
+<div class="aspect-square bg-canvas-cream rounded-xl p-1 flex flex-col justify-between cursor-pointer hover:scale-95 transition-transform" data-day="24">
+<span class="font-label-sm text-label-sm text-text-secondary">24</span>
+<span class="font-label-sm text-[9px] text-emerald-600 font-bold leading-none">+$890</span>
+</div>
+<div class="aspect-square bg-canvas-cream rounded-xl p-1 flex flex-col justify-between cursor-pointer hover:scale-95 transition-transform" data-day="25">
+<span class="font-label-sm text-label-sm text-text-secondary">25</span>
+<span class="font-label-sm text-[9px] text-emerald-600 font-bold leading-none">+$1.3k</span>
+</div>
+<div class="aspect-square bg-surface-taupe/15 rounded-xl p-1 flex flex-col justify-between opacity-50">
+<span class="font-label-sm text-label-sm text-text-secondary">26</span>
+</div>
+<div class="aspect-square bg-surface-taupe/15 rounded-xl p-1 flex flex-col justify-between opacity-50">
+<span class="font-label-sm text-label-sm text-text-secondary">27</span>
+</div>
+<!-- Week 5 -->
+<div class="aspect-square bg-canvas-cream rounded-xl p-1 flex flex-col justify-between cursor-pointer hover:scale-95 transition-transform" data-day="28">
+<span class="font-label-sm text-label-sm text-text-secondary">28</span>
+<span class="font-label-sm text-[9px] text-emerald-600 font-bold leading-none">+$480</span>
+</div>
+<div class="aspect-square bg-canvas-cream rounded-xl p-1 flex flex-col justify-between cursor-pointer hover:scale-95 transition-transform" data-day="29">
+<span class="font-label-sm text-label-sm text-text-secondary">29</span>
+<span class="font-label-sm text-[9px] text-accent-coral font-bold leading-none">-$310</span>
+</div>
+<div class="aspect-square bg-canvas-cream rounded-xl p-1 flex flex-col justify-between cursor-pointer hover:scale-95 transition-transform" data-day="30">
+<span class="font-label-sm text-label-sm text-text-secondary">30</span>
+<span class="font-label-sm text-[9px] text-emerald-600 font-bold leading-none">+$950</span>
+</div>
+<div class="aspect-square bg-canvas-cream rounded-xl p-1 flex flex-col justify-between cursor-pointer hover:scale-95 transition-transform" data-day="31">
+<span class="font-label-sm text-label-sm text-text-secondary">31</span>
+<span class="font-label-sm text-[9px] text-emerald-600 font-bold leading-none">+$1.6k</span>
+</div>
+<div class="aspect-square bg-canvas-cream/40 rounded-xl p-1 flex flex-col justify-between opacity-30">
+<span class="font-label-sm text-label-sm">1</span>
+</div>
+<div class="aspect-square bg-canvas-cream/40 rounded-xl p-1 flex flex-col justify-between opacity-30">
+<span class="font-label-sm text-label-sm">2</span>
+</div>
+<div class="aspect-square bg-canvas-cream/40 rounded-xl p-1 flex flex-col justify-between opacity-30">
+<span class="font-label-sm text-label-sm">3</span>
+</div>
+</div>
+</div>
+<!-- Cumulative Equity Curve Card -->
+<div class="bg-surface-dark text-text-light rounded-3xl p-5 shadow-lg relative overflow-hidden">
+<div class="flex items-center justify-between mb-3">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-text-secondary uppercase">October Equity Trajectory</span>
+<span class="font-title-md text-title-md text-text-light">Drawdown Controlled Curve</span>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-surface-taupe/20 text-text-light font-label-sm text-label-sm">22 Trading Days</span>
+</div>
+<!-- Inline Smooth SVG Line Chart with Gradient Fill -->
+<div class="w-full h-28 relative">
+<svg class="w-full h-full overflow-visible" preserveaspectratio="none" viewbox="0 0 320 100">
+<defs>
+<lineargradient id="curveGradient" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#FF4D4D" stop-opacity="0.35"></stop>
+<stop offset="100%" stop-color="#FF4D4D" stop-opacity="0.0"></stop>
+</lineargradient>
+</defs>
+<!-- Area fill under line -->
+<path d="M 0,90 Q 30,85 50,75 T 100,68 T 150,55 T 200,60 T 230,35 T 270,25 T 320,8 L 320,100 L 0,100 Z" fill="url(#curveGradient)"></path>
+<!-- Main Line -->
+<path d="M 0,90 Q 30,85 50,75 T 100,68 T 150,55 T 200,60 T 230,35 T 270,25 T 320,8" fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-width="2.5"></path>
+<!-- Node point for Oct 21 Milestone -->
+<circle cx="230" cy="35" fill="#FF4D4D" r="5" stroke="#FFFFFF" stroke-width="2"></circle>
+</svg>
+<div class="absolute left-[70%] top-2 -translate-x-1/2 bg-accent-coral text-text-light px-2 py-0.5 rounded-full font-label-sm text-label-sm shadow-md">
+        Oct 21 Peak
+      </div>
+</div>
+<div class="flex items-center justify-between pt-2 text-text-secondary font-label-sm text-label-sm">
+<span>Oct 01 ($100k Base)</span>
+<span class="text-emerald-400 font-semibold">$118,420.50 Final Balance</span>
+</div>
+</div>
+<!-- Selected Day Session Audit Sheet: Oct 21 -->
+<div class="bg-surface-container rounded-3xl p-5 shadow-sm space-y-4">
+<!-- Day Header -->
+<div class="flex items-center justify-between pb-2">
+<div class="flex items-center gap-2.5">
+<div class="w-10 h-10 rounded-2xl bg-surface-dark flex items-center justify-center text-text-light shadow-sm">
+<span class="material-symbols-outlined text-accent-coral text-[20px]">calendar_today</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-headline-md text-headline-md text-surface-dark">Monday, Oct 21</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-emerald-500/15 text-emerald-700 font-bold">3 Trades</span>
+</div>
+<span class="font-label-sm text-label-sm text-text-secondary">London &amp; NY Overlap Session</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-title-md text-title-md text-emerald-600 block">+$2,250.00</span>
+<span class="font-label-sm text-label-sm text-text-secondary">Session Net</span>
+</div>
+</div>
+<!-- Closed Orders List -->
+<div class="flex flex-col gap-2">
+<span class="font-label-sm text-label-sm text-text-secondary uppercase tracking-wider">Executed Orders</span>
+<!-- Order 1: XAU/USD -->
+<div class="bg-canvas-cream rounded-2xl p-3 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-surface-dark flex items-center justify-center text-text-light">
+<span class="font-label-sm text-label-sm font-bold text-accent-coral">GOLD</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-title-md text-title-md text-surface-dark">XAU/USD</span>
+<span class="font-label-sm text-[10px] px-1.5 py-0.5 rounded bg-surface-taupe/30 text-surface-dark font-medium">BUY 2.00</span>
+</div>
+<span class="font-label-sm text-label-sm text-text-secondary">Entry: 2718.4 • Exit: 2731.9</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-title-md text-title-md text-emerald-600 font-semibold">+$2,700.00</span>
+<span class="font-label-sm text-[10px] text-text-secondary block">R:R 1:3.2</span>
+</div>
+</div>
+<!-- Order 2: EUR/USD -->
+<div class="bg-canvas-cream rounded-2xl p-3 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-surface-dark flex items-center justify-center text-text-light">
+<span class="font-label-sm text-label-sm font-bold text-text-secondary">EUR</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-title-md text-title-md text-surface-dark">EUR/USD</span>
+<span class="font-label-sm text-[10px] px-1.5 py-0.5 rounded bg-accent-coral/20 text-accent-coral font-medium">SELL 3.50</span>
+</div>
+<span class="font-label-sm text-label-sm text-text-secondary">Entry: 1.0862 • Stop Out</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-title-md text-title-md text-accent-coral font-semibold">-$450.00</span>
+<span class="font-label-sm text-[10px] text-text-secondary block">Cut cleanly</span>
+</div>
+</div>
+<!-- Order 3: BBCA.JK -->
+<div class="bg-canvas-cream rounded-2xl p-3 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-surface-dark flex items-center justify-center text-text-light">
+<span class="font-label-sm text-label-sm font-bold text-emerald-400">IDX</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-title-md text-title-md text-surface-dark">BBCA.JK</span>
+<span class="font-label-sm text-[10px] px-1.5 py-0.5 rounded bg-surface-taupe/30 text-surface-dark font-medium">SWING 50 Lot</span>
+</div>
+<span class="font-label-sm text-label-sm text-text-secondary">WIB Opening Momentum</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-title-md text-title-md text-emerald-600 font-semibold">+$480.00</span>
+<span class="font-label-sm text-[10px] text-text-secondary block">TP Partial</span>
+</div>
+</div>
+</div>
+<!-- Psychology & Mindset Check -->
+<div class="bg-canvas-cream rounded-2xl p-4 flex flex-col gap-2.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-accent-coral text-[18px]">self_improvement</span>
+<span class="font-label-md text-label-md text-surface-dark">Psychological State &amp; Discipline</span>
+</div>
+<div class="flex items-center gap-1 bg-surface-dark text-text-light px-2 py-0.5 rounded-full font-label-sm text-label-sm">
+<span>State:</span>
+<span class="text-emerald-400 font-bold">Zen</span>
+</div>
+</div>
+<!-- Progress bar for Discipline -->
+<div class="space-y-1">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-text-secondary">Execution Discipline Score</span>
+<span class="font-bold text-surface-dark">9 / 10</span>
+</div>
+<div class="w-full h-2 bg-surface-taupe/30 rounded-full overflow-hidden">
+<div class="h-full bg-accent-coral rounded-full" style="width: 90%;"></div>
+</div>
+</div>
+<!-- Session Reflection Post-Mortem -->
+<div class="pt-2">
+<span class="font-label-sm text-label-sm text-text-secondary uppercase tracking-wider block mb-1">Post-Mortem Note</span>
+<p class="font-body-sm text-body-sm text-surface-dark italic bg-surface-container/60 p-2.5 rounded-xl leading-relaxed">
+          “Gold order respected liquidity sweep at 2715 exactly as planned. Honored stop loss immediately on EUR without emotional averaging down. Preserved energy for the swing target.”
+        </p>
+</div>
+</div>
+</div>
+<!-- Quick Share / Institutional Export Button -->
+<div class="pt-1">
+<button class="w-full h-12 rounded-full bg-surface-dark text-text-light font-label-md text-label-md flex items-center justify-center gap-2 shadow-md active:scale-98 transition-transform" id="exportAuditBtn" type="button">
+<span class="material-symbols-outlined text-[18px] text-accent-coral">ios_share</span>
+<span>Export Signed Prime Audit Report (PDF)</span>
+</button>
+</div>
+</div>
+<script>
+  // Interactive Day Selection within Calendar Grid
+  const calendarCells = document.querySelectorAll('#calendar-grid [data-day]');
+  calendarCells.forEach(cell => {
+    cell.addEventListener('click', () => {
+      calendarCells.forEach(c => {
+        c.classList.remove('bg-surface-dark', 'text-text-light', 'ring-2', 'ring-accent-coral', 'shadow-md', 'scale-105', 'z-10');
+        if (!c.classList.contains('opacity-30') && !c.classList.contains('opacity-50')) {
+          c.classList.add('bg-canvas-cream');
+        }
+      });
+      cell.classList.remove('bg-canvas-cream');
+      cell.classList.add('bg-surface-dark', 'text-text-light', 'ring-2', 'ring-accent-coral', 'shadow-md', 'scale-105', 'z-10');
+    });
+  });
+
+  const exportBtn = document.getElementById('exportAuditBtn');
+  if (exportBtn) {
+    exportBtn.addEventListener('click', () => {
+      const originalText = exportBtn.innerHTML;
+      exportBtn.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-spin text-accent-coral">progress_activity</span><span>Compiling October Vault...</span>';
+      setTimeout(() => {
+        exportBtn.innerHTML = '<span class="material-symbols-outlined text-[18px] text-emerald-400">check_circle</span><span>Report Dispatched to Secure Storage</span>';
+        setTimeout(() => {
+          exportBtn.innerHTML = originalText;
+        }, 2500);
+      }, 1000);
+    });
+  }
+</script></main><div class="fixed bottom-0 w-full z-50 pointer-events-none pb-safe"><div class="max-w-md mx-auto px-margin flex items-center justify-between gap-space-sm"><nav class="pointer-events-auto flex-1 h-16 rounded-full bg-surface-dark/95 backdrop-blur-xl p-1.5 flex items-center justify-around shadow-[0_20px_40px_-6px_rgba(25,25,25,0.28)]" data-active-classes="bg-text-light text-surface-dark font-semibold shadow-[0_4px_16px_rgba(0,0,0,0.18)]"><a class="min-w-[44px] min-h-[44px] px-3.5 py-2 rounded-full flex items-center justify-center gap-1.5 text-text-light/50 hover:text-text-light transition-all duration-200" data-path="chart" href="#"><span class="material-symbols-outlined text-[20px]">candlestick_chart</span><span class="font-label-md text-label-md hidden md:inline">Chart</span></a><a aria-current="page" class="min-w-[44px] min-h-[44px] px-3.5 py-2 rounded-full flex items-center justify-center gap-1.5 transition-all duration-200 bg-text-light text-surface-dark font-semibold shadow-[0_4px_16px_rgba(0,0,0,0.18)]" data-path="journal" href="#"><span class="material-symbols-outlined text-[20px]">history_edu</span><span class="font-label-md text-label-md hidden md:inline">Journal</span></a><a class="min-w-[44px] min-h-[44px] px-3.5 py-2 rounded-full flex items-center justify-center gap-1.5 text-text-light/50 hover:text-text-light transition-all duration-200" data-path="macro" href="#"><span class="material-symbols-outlined text-[20px]">public</span><span class="font-label-md text-label-md hidden md:inline">Macro</span></a><a class="min-w-[44px] min-h-[44px] px-3.5 py-2 rounded-full flex items-center justify-center gap-1.5 text-text-light/50 hover:text-text-light transition-all duration-200" data-path="broker-portfolio" href="#"><span class="material-symbols-outlined text-[20px]">account_balance_wallet</span><span class="font-label-md text-label-md hidden md:inline">Broker</span></a></nav><button aria-label="Send Signal Quick Order" class="pointer-events-auto shrink-0 w-14 h-14 min-w-[44px] min-h-[44px] rounded-full bg-accent-coral text-text-light flex items-center justify-center shadow-[0_12px_28px_-4px_rgba(255,77,77,0.45)] active:scale-95 transition-transform duration-150" type="button"><span class="material-symbols-outlined text-[24px]">bolt</span></button></div></div></body></html>

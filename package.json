@@ -1,0 +1,22 @@
+{
+  "name": "monetasens-workspace",
+  "private": true,
+  "version": "2.0.0",
+  "type": "module",
+  "workspaces": ["frontend", "backend"],
+  "scripts": {
+    "dev": "concurrently -k -n api,web -c cyan,magenta \"npm run dev -w backend\" \"npm run dev -w frontend\"",
+    "build": "npm run build --workspaces",
+    "preview": "concurrently -k -n api,web \"npm start -w backend\" \"npm run preview -w frontend\"",
+    "typecheck": "npm run typecheck --workspaces",
+    "test": "npm test --workspaces",
+    "test:e2e": "playwright test",
+    "icons": "npm run icons -w frontend",
+    "format": "prettier --write frontend/src backend/src tests *.ts *.json README.md"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "concurrently": "^9.2.0",
+    "prettier": "^3.9.6"
+  }
+}
