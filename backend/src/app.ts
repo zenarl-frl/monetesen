@@ -5,7 +5,7 @@ import { createHmac, randomBytes, timingSafeEqual } from 'node:crypto';
 import { z } from 'zod';
 import type { Config } from './config.js';
 import { candlesSchema, eventsSchema, signalSchema, symbolSchema, timeframeSchema } from './contracts.js';
-import { demoCandles, demoEvents } from './providers/demo.js';
+import { demoCandles, demoCandlesRealtime, demoEvents } from './providers/demo.js';
 import { bridgeGet } from './providers/bridge.js';
 import { Storage } from './services/storage.js';
 import { BrokerService, exposure } from './services/broker.js';
@@ -45,10 +45,14 @@ export async function createApp(config: Config, storage = new Storage(config.DAT
   });
   app.get('/api/status', (_req, res) => res.json({ market: config.MARKET_PROVIDER, calendar: config.CALENDAR_PROVIDER, broker: config.BROKER_PROVIDER, telegramConfigured: !!(config.TELEGRAM_BOT_TOKEN && config.TELEGRAM_CHAT_ID), authenticated: true, passwordProtected: !!config.APP_PASSWORD, maxRiskPercent: config.MAX_RISK_PERCENT, maxMarginPercent: config.MAX_MARGIN_PERCENT }));
   app.get('/api/market/candles', async (req, res) => {
-    const symbol = symbolSchema.parse(req.query.symbol || 'XAU/USD'); const timeframe = timeframeSchema.parse(req.query.timeframe || '15m');
+    const symbol = symbolSchema.parse(req.query.symbol || 'XAU/USD'); const timeframe = timeframeSchema.parse(req.query.timeframe || '15m'); const realtime = req.query.realtime === '1';
     const query = new URLSearchParams({ symbol, timeframe });
-    const candles = config.MARKET_PROVIDER === 'demo' ? demoCandles(symbol, timeframe) : await bridgeGet(config.MARKET_API_URL, `/market/candles?${query}`, config.MARKET_API_TOKEN, candlesSchema);
-    res.json({ source: config.MARKET_PROVIDER, symbol, timeframe, asOf: new Date().toISOString(), candles });
+    let candles;
+    if (config.MARKET_PROVIDER === 'demo') {
+      if (realtime) { candles = demoCandlesRealtime(symbol, timeframe); }
+      else { candles = demoCandles(symbol, timeframe); }
+    } else { candles = await bridgeGet(config.MARKET_API_URL, `/market/candles?${query}`, config.MARKET_API_TOKEN, candlesSchema); }
+    res.json({ source: config.MARKET_PROVIDER, symbol, timeframe, realtime, asOf: new Date().toISOString(), candles });
   });
   app.get('/api/calendar', async (_req, res) => {
     const events = config.CALENDAR_PROVIDER === 'demo' ? demoEvents() : await bridgeGet(config.CALENDAR_API_URL, '/calendar', config.CALENDAR_API_TOKEN, eventsSchema);

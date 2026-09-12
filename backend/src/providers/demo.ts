@@ -13,6 +13,19 @@ export function demoCandles(symbol: string, timeframe: string, now = Date.now())
     return { time, open, close, high: Math.max(open, close) + wick, low: Math.min(open, close) - wick, volume: Math.round(100 + Math.abs(Math.sin(time / step)) * 1800) };
   });
 }
+export function demoCandlesRealtime(symbol: string, timeframe: string, since = Date.now() - 300000): Candle[] {
+  const step = intervals[timeframe]; const base = prices[symbol];
+  const end = Math.floor(since / 1000 / step) * step;
+  const closeAt = (t: number) => base * (1 + Math.sin(t / step * .19) * .009 + Math.sin(t / step * .043) * .017 + Math.sin(t / step * 1.73) * .002);
+  const candles: Candle[] = [];
+  for (let i = 239; i >= 0; i--) {
+    const time = end - i * step;
+    const open = closeAt(time - step), close = closeAt(time);
+    const wick = base * (.0006 + Math.abs(Math.sin(time / step * 2.1)) * .0012);
+    candles.unshift({ time, open, close, high: Math.max(open, close) + wick, low: Math.min(open, close) - wick, volume: Math.round(100 + Math.abs(Math.sin(time / step)) * 1800) });
+  }
+  return candles;
+}
 export function demoEvents(now = Date.now()): EconomicEvent[] {
   // Demo release times are fixed for the UTC day; polling never resets a countdown.
   const day = new Date(now); day.setUTCHours(0, 0, 0, 0);
